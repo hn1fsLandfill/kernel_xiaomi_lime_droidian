@@ -2963,6 +2963,9 @@ struct related_thread_group *task_related_thread_group(struct task_struct *p)
 	return rcu_dereference(p->grp);
 }
 
+unsigned int sysctl_walt_rtg_cfs_boost_prio;
+unsigned int sysctl_walt_low_latency_task_threshold;
+
 static inline bool task_rtg_high_prio(struct task_struct *p)
 {
 	return task_in_related_thread_group(p) &&

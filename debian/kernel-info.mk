@@ -43,7 +43,7 @@ KERNEL_CONFIG_USE_DIFFCONFIG = 0
 # KERNEL_PRODUCT_DIFFCONFIG = my_diffconfig
 
 # Defconfig to use
-KERNEL_DEFCONFIG = vendor/citrus-stock-perf_defconfig
+KERNEL_DEFCONFIG = vendor/chime_defconfig
 
 # Whether to include DTBs with the image. Use 0 (no) or 1.
 # GKI devices should set this to 0
@@ -196,13 +196,13 @@ BUILD_CLANG_TRIPLET = aarch64-linux-gnu-
 BUILD_CC = clang
 
 # Use llvm instead of gcc. Recent Android kernels (past android 12) need llvm.
-BUILD_LLVM = 1
+BUILD_LLVM = 0
 
 # Set to 1 to skip modules packaging if CONFIG_MODULES is disabled in defconfig 
 BUILD_SKIP_MODULES = 1
 
 # Set clang version
-CLANG_VERSION = 14.0-r450784d
+CLANG_VERSION = 12.0-r416183b
 # Set to 1 to use a manually installed toolchain
 # Remember to update the path in BUILD_PATH
 CLANG_CUSTOM = 0
